@@ -1,0 +1,117 @@
+.footer-section {
+    width: 100%;
+    background-color: #1a1d21;
+    .footer-widget{
+        @media (max-width:991px){
+            margin-bottom: 1rem;
+        }
+    }
+    .widget-title {
+        position: relative;
+        color: #fff;
+        text-transform: capitalize;
+        padding-bottom: 20px;
+        margin-bottom: 2rem;
+        @media (max-width:991px){
+            margin-bottom: 1.2rem;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 42px;
+            height: 2px;
+            background-color: $primary-color;
+        }
+    }
+    .footer-list{
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 5px 0;
+            list-style: none;
+            a {
+                color: #e3e2e2;
+                transition: all 0.3s;
+                position: relative;
+                padding-left: 25px;
+                &::before {
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 2px;
+                    background-color: #e3e2e2;
+                }
+            }
+            p {
+                color: #e3e2e2;
+                i {
+                    color: $primary-color;
+                    margin-right: 10px;
+                }
+            }
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+        
+    }
+    .footer-widget-content{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            padding: 5px 0;
+            p{
+                color: #fff;
+                .las{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .footer-social {
+        margin-top: .5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding: 0;
+        li {
+            margin-right: 1rem;
+            list-style: none;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            line-height: 2rem;
+            border: 1px solid rgb(146, 144, 144);
+            text-align: center;
+            
+            a {
+                color: rgb(146, 144, 144);
+            }
+            &:hover{
+                background: $primary-color;
+                border: 1px solid $primary-color;
+                a{
+                    color: #fff;
+                }
+            }
+
+        }
+       
+    }
+}
+.privacy-area {
+    padding: 15px;
+    background-color: #1a1d21;
+    border-top: 1px solid #3A474E;
+    font-weight: normal;
+    p {
+        color: #e3e2e2;
+        margin-bottom: 0;
+    }
+}

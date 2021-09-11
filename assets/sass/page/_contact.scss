@@ -1,0 +1,77 @@
+.contact-section{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .form-area {
+        background-color: $primary-color;
+        padding: 4rem;
+        @media (max-width:520px){
+            padding:1.5rem;
+        }
+        .title{
+            position: relative;
+            font-size: 30px;
+            padding-bottom: 20px;
+            margin-top: -9px;
+            margin-top: -8px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            color: #fff;
+        }
+        .form-group{
+            margin-bottom: 1.5rem;
+            input,textarea{
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 0.5rem 1rem;
+
+                &::placeholder{
+                    font-size: 15px;
+                }
+            }
+            input[type="submit"]{
+                width: auto;
+                cursor: pointer;
+                font-weight: 500;
+                background: transparent;
+                color: #fff;
+                text-transform: uppercase;
+                transition: all 0.3s;
+                border: 1px solid #fff;
+                line-height: 1.4;
+                &:hover{
+                    background: #fff;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .common-form-style {
+        padding: 6rem 3.8rem;
+        text-align: left;
+        background-color: #fff;
+        box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.3);
+        height: 100%;
+        .title {
+            position: relative;
+            font-size: 30px;
+            margin-top: -9px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        .account-item {
+            width: 50%;
+            li{
+                list-style: none;
+                margin-bottom: 1rem;
+                span{
+                    color: $primary-color;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.small-banner{
+    text-align: center;
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0rem;
+        list-style: none;
+        padding: 1rem;
+    }
+    .breadcrumb-item{
+        a{
+            color: #333;
+        }
+        &.active {
+            color: $primary-color;
+        }
+    }
+    
+}

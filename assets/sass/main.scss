@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Open+Sans&display=swap');
+@import 'abstract/variables';
+@import 'abstract/responsive';
+@import 'base/typography';
+@import 'component/buttons';
+@import 'component/small-banner';
+@import 'layout/topbar';
+@import 'layout/header';
+@import 'layout/banner';
+@import 'layout/footer';
+@import 'page/air-crew-cours';
+@import 'page/about';
+@import 'page/mission';
+@import 'page/blog-post1';
+@import 'page/blog-details';
+@import 'page/stu-registration';
+@import 'page/contact';
+
+
+// preloader start===========
+.loader-bg {
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+  }
+  .loader-p{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+  }
+  .loader-p:before, .loader-p:after{
+    content: '';
+    border: 1em solid $primary-color;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+  }
+  .loader-p:before{
+    animation-delay: 0.5s;
+  }
+  @keyframes loader{
+    0%{
+      transform: scale(.5);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+//   preloader end=============
+*{
+    transition: all 0.4s ease-in-out;
+    scroll-behavior: smooth;
+    text-decoration: none;
+  
+    a{
+        text-decoration: none !important;
+    }
+}
+.box--shadow{
+    box-shadow: 2px 2px 15px 3px rgba(0,0,0,0.06);
+}
+.pt-220{
+    padding-top: 13.75rem;
+    @media (max-width:991px){
+        padding-top: 9rem;
+    }
+}
+.pb-220{
+    padding-bottom: 13.75rem;
+    @media (max-width:991px){
+        padding-bottom: 9rem;
+    }
+}
+.ptb-200{
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+   
+}
+.ptb-100{
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    @media (max-width:991px){
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+}
+.pt-100{
+    padding-top: 7.5rem;
+    @media (max-width:991px){
+        padding-top: 4.5rem;
+    }
+
+}
+.pb-100{
+    padding-bottom: 7.5rem;
+    @media (max-width:991px){
+        padding-bottom: 4.5rem;
+    }
+  
+}
+.ptb-80{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @media (max-width:991px){
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+   
+}
+.pt-80{
+    padding-top: 5rem;
+    @media (max-width:991px){
+        padding-top: 3rem;
+    }
+    
+}
+.pb-80{
+    padding-bottom: 5rem;
+    @media (max-width:991px){
+        padding-bottom: 3rem;
+    }
+    
+}
+.ptb-70{
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    @media (max-width:991px){
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+   
+}
+.ptb-50{
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    @media (max-width:991px){
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+    }
+   
+}
+.pb-50{
+    padding-bottom: 3.125rem;
+    @media (max-width:991px){
+        padding-bottom: 2.5rem;
+    }
+   
+}
+.ptb-40{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @media (max-width:991px){
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+   
+}
+
+.pt-40{
+    padding-top: 2.5rem;
+    @media (max-width:991px){
+        padding-top: 2rem;
+    }
+}
+
+
+.pb-60{
+    padding-bottom: 3.75rem;
+    @media (max-width:991px){
+        padding-bottom: 2.7rem;
+    }
+    
+}
+
+.pt-70{
+    padding-top: 4.375rem;
+    
+}
+.pb-20{
+    padding-bottom: 1.25rem;
+}
+.pt-30{
+    padding-top: 2rem;
+    @media (max-width:991px){
+        padding-top: 1.5rem;
+    }
+    
+}
+.pb-30{
+    padding-bottom: 2rem;
+    @media (max-width:991px){
+        padding-bottom: 1.5rem;
+    }
+
+}
+.pb-40{
+    padding-bottom: 2.5rem;
+    @media (max-width:991px){
+        padding-bottom: 2rem;
+    }
+}
+
+.ptb-150{
+    padding-bottom: 9.375rem;
+    padding-top: 9.375rem;
+    @media (max-width:991px){
+        padding-bottom: 6.5rem;
+        padding-top: 6.5rem;
+    }
+
+}
+.ps-80{
+    padding-left: 5rem !important;
+}
+.pe-80{
+    padding-right: 5rem;
+}
+.mb-30{
+    margin-bottom: 1.875rem;
+    @media (max-width:991px){
+        margin-bottom: 1.5rem;
+    }
+}
+.mb-20{
+    margin-bottom: 1.5rem;
+    @media (max-width:991px){
+        margin-bottom: 1.1rem;
+    }
+}
+.mb-16{
+    margin-bottom: 1rem;
+}
+.mt-40{
+    margin-top: 2.5rem;
+}
+.mb-40{
+    margin-bottom: 2.5rem !important;
+}
+.mb-50{
+    margin-bottom: 3.125rem;
+}
+.mb-60{
+    margin-bottom: 3.75rem;
+    @media (max-width:991px){
+        margin-bottom: 2.7rem;
+    }
+}
+.mt-60{
+    margin-top: 3.75rem;
+    @media (max-width:991px){
+        margin-top: 2.7rem;
+    }
+}
+.mt-20{
+    margin-top: 1.25rem;
+}
+.mt-80{
+    margin-top: 5rem !important;
+}
+.mb-30-none {
+    margin-bottom: -30px;
+}
+
+.title{
+    font-size: 1.5rem;
+    a{
+        color: #333;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+.border--left{
+    border-left: 1px solid rgba(202, 202, 202, 0.40);
+}
+.border--bottom{
+    border-bottom: 1px solid rgba(202, 202, 202, 0.40);
+}
+
+.section-title{
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 3.9rem;
+    font-weight: 600;
+    margin-top: -0.5rem;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 3rem;
+        background-color: $primary-color;
+        height: 2px;
+        top: 4.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+.section-title2{
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 3.5rem;
+    font-weight: 600;
+    margin-top: -0.5rem;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 3rem;
+        background-color: $primary-color;
+        height: 2px;
+        bottom: -1.5rem;
+        left: 1.5rem;
+        transform: translateX(-50%);
+
+    }
+
+}
+// ========================pilot seniority section start===============================================
+.pilot-seniority{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .right-img-one{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 450px;
+        @media (max-width:1200px){
+            display: none;
+        }
+        img{
+            height: 100%;
+        }
+        
+    }
+    .right-img-two{
+        position: absolute;
+        top: 25%;
+        right: 2rem;
+        @media (max-width:1200px){
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .right-img-three{
+        position: absolute;
+        top: 33%;
+        right: 2rem;
+        max-width: 100%;
+        height: auto;
+        @media (max-width:1600px){
+            max-width: 50%;
+        }
+        @media (max-width:991px){
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+       
+    }
+    .pilot-seniority-item{
+        margin-bottom: 1rem;
+        li{
+            list-style: none;
+            margin-bottom: 0.5rem;
+            position: relative;
+            margin-left: 1.5rem;
+            &::before{
+                content: '\f00c';
+                font-family: 'Line awesome Free';
+                font-weight: 700;
+                color: $primary-color;
+                position: absolute;
+                top: 0.2rem;
+                left: -1.5rem;
+
+            }
+        }
+    }
+
+}
+
+
+
+//========================== courses section start====================================================
+.courses{
+    .course-wrapper{
+        margin-bottom: -1.4rem;
+        .course-item{
+            width: 100%;
+         //    max-width: 25rem;
+            position: relative;
+            border-radius: 0.6rem;
+            overflow: hidden;
+            margin-bottom: 1.4rem;
+            &:hover .course-item-back{
+                opacity: 1;
+            }
+            .course-item-front{
+                width: 100%;
+                .front-content{
+                    padding: 1.4rem;
+                }
+            }
+            .course-item-back{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                 background: $primary-color;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+                 padding: 6rem 0;
+                 opacity: 0;
+                 color: #fff;
+                 text-transform: capitalize;
+                 a{
+                     color: #fff;
+                 }
+            }
+            
+        }
+    }
+}
+
+// ====================partner-choice section=======================
+.partner-choic{
+    position: relative;
+    .choice-right-img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        z-index: 1;
+        width: 300px;
+        @media (max-width:1024px){
+            display: none;
+            visibility: hidden;
+        }
+    }
+    .partner-image-left{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width:991px){
+            display: none;
+            visibility: hidden;
+        }
+    }
+    .partner-choice-content{
+        width: 100%;
+        max-width: 37rem;
+        padding-left: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        z-index: 5;
+        @media (max-width:991px){
+            padding-left: 1.5rem;
+            width: 100%;
+        }
+        .counter-wrapper{
+            margin-top: 3rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .counter-item{
+                padding: 0 1rem;
+                @media (max-width:576px){
+                    margin-top: 1.5rem;
+                    padding: 0 2rem;
+                }
+                .odometer{
+                    font-weight: 600;
+                    font-size: 2.9rem !important;
+                }
+                p{
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    text-transform: capitalize;
+                }
+            }
+            @media (max-width:576px){
+                justify-content: center;
+            }
+        }
+    }
+    span{
+        color: $primary-color;
+        margin-right: 0.3rem;
+    }
+    li{
+        list-style: none;
+        width: 245px;
+        padding: 0.25rem;
+        display: block;
+        
+    }
+}
+
+// ========================trainer================
+.trainer{
+    width: 100%;
+    .trainer-item{
+        width: 100%;
+        max-width: 19.1rem;
+        margin: 0 auto;
+        @media (max-width:991px){
+            margin-bottom: 1.5rem;
+        }
+        .trainer-image{
+            width: 100%;
+            
+            img{
+                width: 100%;
+            }
+        }
+        .trainer-content{
+            padding: 2rem;
+            background: rgba(0,0,0,0.06);
+        }
+        .title{
+            text-transform: capitalize;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// choose-us section====================
+.choose-us-section{
+    width: 100%;
+    .choose-us-image{
+        width: 100%;
+        height: 100%;
+        @media (max-width:991px){
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+    .choose-content-area{
+        max-width: 42rem;
+        padding-left: 4rem;
+        padding: 3rem 0;
+        @media (max-width:991px){
+            padding-left: 1rem;
+        }
+        .choose-content{
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+            p{
+                margin-bottom: 0;
+            }
+            .choose-title{
+                text-transform: capitalize;
+                position: relative;
+                
+                &::before{
+                    content: '';
+                    height: 0.75rem;
+                    width: 0.75rem;
+                    background: $primary-color;
+                    position: absolute;
+                    top: 0.5rem;
+                    left: -1.5rem;
+                }
+            } 
+        }
+        
+    }
+}
+
+// ==================achievement==================
+// achievement section=====================
+.achivement{
+    width: 100%;
+    .achivment-image{
+        width: 100%;
+        @media (max-width:991px){
+            display: none;
+        }
+    }
+    ul{
+        li{
+            margin-bottom: 0.8rem;
+        }
+    }
+    @media (max-width:991px){
+        padding-left: 1rem;
+    }
+}
+
+
+// gallery start==============================
+.gallery-section{
+    width: 100%;
+    .button-group{
+        display: flex;
+        justify-content: center;
+        button{
+            border: none;
+            background: transparent;
+            font-size: 1.125rem;
+            text-transform: capitalize;
+            font-weight: 500;
+            margin: 0 .2rem 0 .2rem;
+            padding: 0 1rem;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .active{
+            color: $primary-color;
+        }
+    }
+    .gallery-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        .element-item{
+            width: 30%;
+            min-width: 300px;
+            height: 310px;
+            margin-left: 3%;
+            margin-bottom: 3%;
+            position: relative;
+            &:hover .galler-overlay{
+                opacity: 1;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .galler-overlay{
+                background: $primary-color;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 100%;
+                height: 190px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                color: #fff;
+                span{
+                    color: #fff;
+                    font-size: 2rem;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: .5rem .9rem;
+                    text-align: center;
+                    margin: 0.5rem;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+// ======================newsletter==================
+.newsletter{
+    background: $primary-color;
+    form{
+        width: 100%;
+        max-width: 33rem;
+    }
+   .form-inner{
+       position: relative;
+       margin-bottom: .25rem;
+     
+       input{
+        width: 100%;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        outline: none;
+        border:none;
+        
+    }
+    .lab{
+        color: $primary-color;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2.5rem;
+        z-index: 10;
+        font-weight: bold;
+    }
+   }
+}
+
+// ============about us section=========================
+.abt-us{
+    .abt-us-image{
+        width: 100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        @media (max-width:991px){
+            display: none;
+        }
+    }
+    .accordion-item {
+        margin-bottom: 1rem;
+        background-color: #fff;
+        border: none;
+        .accordion-body{
+            padding: 1.3rem;
+        }
+        
+    }
+    .accordion-button{
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.125rem;
+        &:focus{
+            box-shadow: none;
+        }
+        &::after {
+            flex-shrink: 0;
+            margin-left: auto;
+            background: transparent;
+            background-repeat: no-repeat;
+            transition: transform .2s ease-in-out;
+            content: '\f067';
+            font-family: 'Line awesome Free';
+            font-weight: 600;
+            
+        }
+        &:not(.collapsed) {
+            color: #fff;
+            background-color: $primary-color;
+            box-shadow: none;
+            
+            &::after{
+                background: transparent;
+                transform: rotate(45deg);
+            }
+            
+        }
+    }
+}
+
+// blog section========
+// popular course section========
+.latest-blog-section{
+    width: 100%;
+    .blog-slider{
+        
+         .slick-slide {
+            display: block;
+            text-align: center;
+        }
+        .blog-item{
+            padding: 1rem 1rem;
+            position: relative;
+            margin-left: 1rem;
+            .blog-image{
+                width: 100%;
+                max-width: 21.85rem;
+                height: 23.75rem;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+          .blog-content{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 29%;
+              padding: 1.8rem 1.5rem;
+              text-align: left;
+              max-width: 21.85rem;
+              z-index: 10;
+              background: #fff;
+              .content-footer{
+                  color: #555;
+              }
+              @media (max-width:576px){
+                  position: absolute;
+                  left: 0;
+              }
+          }  
+            
+        }
+        
+    }
+    .slick-dots{
+        padding: 3rem 0;
+        bottom: -3.5rem;
+         li{
+            height: 0.6rem;
+            width: 2rem;
+            background: rgba(250,88,20,0.4);
+            border-radius: 4px;
+        }
+        .slick-active{
+            background: $primary-color;
+            height: 0.6rem;
+            width: 2rem;
+        }
+    }
+    .slick-prev {
+        position: absolute;
+        left: 40%;
+        display: none;
+    }
+    .slick-next {
+        display: none;
+        right: 40%;
+    }
+    
+    
+}
+

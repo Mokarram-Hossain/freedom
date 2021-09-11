@@ -1,0 +1,104 @@
+.mission-vission{
+    li {
+        list-style: none;
+        width: 220px;
+        padding: 0.25rem;
+        display: block;
+        position: relative;
+        margin-left: 1rem;
+        
+    
+        &::before{
+            content: '\f150';
+            font-family: 'Line Awesome free';
+            font-weight: 700;
+            color: $primary-color;
+            position: absolute;
+            top: 0.3 rem;
+            left: -1rem;
+            
+        }
+    }
+    span{
+        color: $primary-color;
+    }
+
+    .mission-content-area{
+        padding-left: 2rem;
+        max-width: 37rem;
+        p.title-text{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// ======================newsletter==================
+.newsletter{
+    background: $primary-color;
+    form{
+        width: 100%;
+        max-width: 33rem;
+    }
+   .form-inner{
+       position: relative;
+       margin-bottom: .25rem;
+     
+       input{
+        width: 100%;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        outline: none;
+        border:none;
+        
+    }
+    .lab{
+        color: $primary-color;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2.5rem;
+        z-index: 10;
+        font-weight: bold;
+    }
+   }
+}
+// ============about us section=========================
+.abt-us{
+    .accordion-item {
+        margin-bottom: 1rem;
+        background-color: #fff;
+        border: none;
+        h5{
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+    }
+    .accordion-button{
+        &:focus{
+            box-shadow: none;
+        }
+        &::after {
+            flex-shrink: 0;
+            margin-left: auto;
+            background: transparent;
+            background-repeat: no-repeat;
+            transition: transform .2s ease-in-out;
+            content: '\f067';
+            font-family: 'Line awesome Free';
+            font-weight: 600;
+            
+        }
+        &:not(.collapsed) {
+            color: #fff;
+            background-color: $primary-color;
+            box-shadow: none;
+            
+            &::after{
+                background: transparent;
+                transform: rotate(45deg);
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,54 @@
+// banner2 section
+.banner2{
+    width: 100%;
+    .slick-prev {
+        left: 3rem;
+        background: $primary-color;
+        color: #fff !important;
+        font-weight: 400;
+        font-size: 0;
+        height: 3.5rem;
+        width: 3.5rem;
+        text-align: center;
+        line-height: 1.1;
+        z-index: 10;
+        @media (max-width:991px){
+            height: 2rem;
+            width: 2rem;
+            left: 0rem;
+        }
+        @media (max-width:600px){
+            opacity: 0;
+        }
+    }
+    .slick-next {
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        background: $primary-color;
+        color: #fff !important;
+        font-weight: 400;
+        font-size: 0;
+        height: 3.5rem;
+        width: 3.5rem;
+        text-align: center;
+        line-height: 1.1;
+        z-index: 10;
+        @media (max-width:991px){
+            height: 2rem;
+            width: 2rem;
+            right: 0rem;
+        }
+        @media (max-width:600px){
+            opacity: 0;
+        }
+        
+    }
+    .banner-content{
+        width: 100%;
+        margin-top: -26px;
+        p{
+            padding-top: 1rem;
+        }
+    }
+}

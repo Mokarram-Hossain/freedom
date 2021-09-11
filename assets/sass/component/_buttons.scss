@@ -1,0 +1,57 @@
+.button{
+    padding: 0.9rem 1.6rem !important;
+    text-transform: uppercase;
+    transition: all 0.4s ease !important;
+    outline: none !important;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.btn--primary{
+    @extend .button;
+    background: $primary-color;
+    color: #fff;
+    border: 1px solid $primary-color;
+    &:hover{
+        background: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+    @media (max-width:991px){
+        padding: 0.7rem 1rem !important;
+    }
+
+}
+
+.btn--secondary{
+    @extend .button;
+    background: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    
+    &:hover{
+        background: $primary-color;
+        color: #fff;
+    } 
+    @media (max-width:991px){
+        padding: 0.7rem 1rem !important;
+    }
+}
+
+.btn--white{
+    @extend .button;
+    background: #fff;
+    border: 1px solid #fff;
+    color: $primary-color;
+    
+    &:hover{
+        background: $primary-color;
+        color: #fff;
+        border: 1px solid #fff;
+    } 
+    @media (max-width:991px){
+        padding: 0.7rem 1rem !important;
+    }
+}
